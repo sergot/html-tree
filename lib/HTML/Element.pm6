@@ -4,8 +4,8 @@ has $.name;
 has %.attrs;
 has $.content;
 
-method new($name, *%attrs) {
-    self.bless(:$name, :%attrs);
+method new($name, $content?, *%attrs) {
+    self.bless(:$name, :$content, :%attrs);
 }
 
 multi method attr(Str $name) {
