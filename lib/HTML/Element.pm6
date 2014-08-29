@@ -7,6 +7,10 @@ method new($name, *%attrs) {
     self.bless(:$name, :%attrs);
 }
 
-method attr(Str $name) {
+multi method attr(Str $name) {
     %!attrs{$name}
+}
+
+multi method attr(Str $name, Str $value) {
+    %!attrs{$name} = $value;
 }
