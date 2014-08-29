@@ -1,2 +1,2 @@
-html-tree
+HTML::Tree
 =========
